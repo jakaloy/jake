@@ -1,1 +1,141 @@
-index
+<body>
+    <div class="headercontainer">
+        <div class="header">
+            <span class="boogleft"><img src="boognish.svg"></span>
+            How's Jake doing?
+            <span class="boogright"><img src="boognish.svg"></span>
+        </div>
+        <div class="update note">
+            Note: I will update this page, likely in the evening, whenever I get an update. The doctors will try to update us every day, but if they don't, no news is good news.
+        </div>
+    </div>
+    <!-- insert new sections here -->
+    <div class="updatesection">
+        <div class="update title">Tuesday, June 3 Evening</div>
+        <div class="update">
+            <div>
+                Krissy went up to visit today. She had a great visit. When she walked in, expecting him to be sleeping, she said "Hi, Honey" and his eyes popped open. She stayed for about an hour and a half. He couldn't talk very well, and had to repeat himself, sometimes just saying the first letter of the word he was trying to say to help her figure it out. He tried to get her to go out and get him some pie before a nurse stopped her saying he couldn't actually eat it. She asked if he wanted to listen to some music, he nodded. She asked, "Ween?" and his eyes flew open.
+                <br/><br/>
+                They listened to some music and talked for a while before she headed out, making sure he had something to listen to so he wasn't sitting in silence.
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="updatesection">
+        <div class="update title">Tuesday, June 3 Morning</div>
+        <div class="update">
+            <div>
+                Due to scheduling conflicts, the tracheostomy is scheduled for Thursday, June 5. If someone canceles he will be pushed up. They do not want him relying on the ventilator for such a long time, so they are trying to ween him off. Give his lungs a chance to do some work while he waits. Today, they reduced the sedation and stopped the ventilator for about ten minutes before his vitals dropped enough that they started it back up again. While he was conscious they tried communicating with him a bit, but his only response was shaking his head so they increased the sedation again.
+                <br/><br/>
+                They plan on taking him off the ventilator later today and tomorrow, giving him a few hours each time to keep his lung strength up before his surgury.
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="updatesection">
+        <div class="update title">Monday, June 2</div>
+        <div class="update">
+            <div>
+                Jake was sleeping all day. He had been using the nose oxygen tubes for the past day to increase his oxygen levels. While that was enough to keep him in a reasonble range, he was still building up too much CO2. To try to help that, the doctors put him on BiPAP, the mask that goes over his mouth to assist his breathing. After a few hours on that and checking his CO2 levels, they determined it was not enough. His CO2 levels were still rising too high. In addition to that, the fluid in his lungs was still not coming out, which was a bigger concern.
+            </div><br/>
+            <div>
+                At this point, the doctors recommented intubation. Jake, while willing, was not a fan of this idea. The doctors worried that, should they wait, Jake could end up requiring intubation emergently. After some conversing, and Uncle Tim's third opinion, Jake agreed and the procedure was started. Unfortunately, due to the metal rods in his neck, intubation proved impossible. Fortunately, because the procedure was not an emergency, they had the time to replan and ended up putting a temporary tube through Jake's throat for the ventilator with near future plans on giving him a tracheostomy.
+                <br/><br/>
+                Due to all of this, Jake is stable. For the rest of the day he was kept sedated and resting.</div>
+            </div>
+    </div>
+</body>
+<style>
+    body{
+        height:auto;
+        background:linear-gradient(340deg,#4F311C,#7D4D2C);
+    }
+    *{
+        font-family:Helvetica;
+        border-radius:15px;
+        cursor:default;
+    }
+    .headercontainer{
+        height:max-content;
+        width:auto;
+    }
+    .header{
+        height:100px;
+        width:stretch;
+        background:linear-gradient(90deg,#4F311C 0%,#B1764E 40%,#B1764E 60%,#4F311C 100%);
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        font-size:4rem;
+        padding-top:8px;
+    }
+    .boogleft{
+        margin-left:1rem;
+        margin-right:auto;
+        margin-bottom:6px;
+    }
+    .boogright{
+        margin-right:1rem;
+        margin-left:auto;
+        margin-bottom:6px;
+    }
+    .updatesection{
+        background:radial-gradient(#B1764E,#754829);
+        height:auto;
+        width:inherit;
+        margin-top:8px;
+        margin-bottom:8px;
+        padding:8px;
+        border:8px solid #B1764E;
+    }
+    .updatesection { .updatesection&:nth-child(1 of &):not(:has(&) ~ * *):not(:has(&) ~ *):not(& ~ * *):not(& *) {
+            border:8px solid #C77238;
+        }
+    }
+    .update{
+        height:auto;
+        width:inherit;
+        margin-top:8px;
+        text-indent:25px;
+        white-space:wrap;
+        font-size:1rem;
+        background:#B1764E;
+        border:2px solid #623313;
+        padding-left:1vw;
+        padding-right:1vw;
+        padding-top:.6rem;
+        padding-bottom:6px;
+    }
+    .title{
+        height:auto;
+        width:max-content;
+        text-indent:0px;
+    }
+    .note{
+        max-width:100%;
+        width:fit-content;
+        text-indent:0px;
+        padding-top:11px;
+        margin-top:8px;
+        margin-bottom:8px;
+        margin-left:auto;
+        margin-right:0px;
+        font-size:1rem;
+        word-wrap:wrap;
+    }
+    .divider{
+        height:8px;
+        width:inherit;
+        background:#402817;
+        margin-top:8px;
+        margin-bottom:8px;
+    }
+    .headerbase{
+        height:12px;
+        width:initial;
+        background:#402817;
+        border-radius:0px;
+    }
+</style>
