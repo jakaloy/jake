@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
     <div class="headercontainer">
         <div class="header">
@@ -5,13 +7,23 @@
             How's Jake doing?
             <span class="boogright"><img src="boognish.svg"></span>
         </div>
-        <div class="update note">
-            Note: I will update this page, likely in the evening, whenever I get an update. The doctors will try to update us every day, but if they don't, no news is good news.
+        <div class="notesection">
+            <div class="text note">
+                Note: I will update this page, likely in the evening, whenever I get an update. The doctors will try to update us every day, but if they don't, no news is good news.
+            </div>
         </div>
     </div>
-    <!-- insert new sections here -->
+    <!-- insert new sections here --><div class="updatesection">
+        <div class="title">Thursday, June 5 Night</div>
+        <div class="update">
+            <div>
+				Jake is doing better. They are weening him off the ventilator more and more. He has been off for four hours now and there is less fluid in his lungs.
+			</div>
+        </div>
+    </div>
+    <div class="divider"></div>
 	<div class="updatesection">
-        <div class="update title">Thursday, June 5 Afternoon</div>
+        <div class="title">Thursday, June 5 Afternoon</div>
         <div class="update">
             <div>
 				The operation is finished and went well. Jake is back in the ICU recovering. I forgot to mention this morning before the operation, the doctor said the scarring from his previous trach would help if not anything else as they could use it as a guide for where to go. 
@@ -22,7 +34,7 @@
     </div>
     <div class="divider"></div>
 	<div class="updatesection">
-        <div class="update title">Thursday, June 5 Morning</div>
+        <div class="title">Thursday, June 5 Morning</div>
         <div class="update">
             <div>
 				Jake's tracheostomy is scheduled for 1:30, so allowing for delays it will happen today. They had a successful weaning today for two hours. I misunderstood his current level of sedation so here I'll clear that up. He is sedated enough to keep him comfortable but can still respond to the doctors and nurses when they go in to check on him, then the sedation is reduced whenever they let up on the vent.
@@ -36,7 +48,7 @@
     </div>
     <div class="divider"></div>
     <div class="updatesection">
-        <div class="update title">Wednesday, June 4</div>
+        <div class="title">Wednesday, June 4</div>
         <div class="update">
             <div>
                 Hospital called. They're still planning on tomorrow for the OR and are working to ween him off the ventilator and sedation. He's still very drowsy, but responds (non-verbally) to the nurses. Once the trach is in it will be pretty quick that they work to take him off sedation and the vent, but the timeline depends on his responsiveness.
@@ -45,7 +57,7 @@
     </div>
     <div class="divider"></div>
     <div class="updatesection">
-        <div class="update title">Tuesday, June 3 Evening</div>
+        <div class="title">Tuesday, June 3 Evening</div>
         <div class="update">
             <div>
                 Krissy went up to visit today. She had a great visit. When she walked in, expecting him to be sleeping, she said "Hi, Honey" and his eyes popped open. She stayed for about an hour and a half. He couldn't talk very well, and had to repeat himself, sometimes just saying the first letter of the word he was trying to say to help her figure it out. He tried to get her to go out and get him some pie before a nurse stopped her saying he couldn't actually eat it. She asked if he wanted to listen to some music, he nodded. She asked, "Ween?" and his eyes flew open.
@@ -56,7 +68,7 @@
     </div>
     <div class="divider"></div>
     <div class="updatesection">
-        <div class="update title">Tuesday, June 3 Morning</div>
+        <div class="title">Tuesday, June 3 Morning</div>
         <div class="update">
             <div>
                 Due to scheduling conflicts, the tracheostomy is scheduled for Thursday, June 5. If someone canceles he will be pushed up. They do not want him relying on the ventilator for such a long time, so they are trying to ween him off. Give his lungs a chance to do some work while he waits. Today, they reduced the sedation and stopped the ventilator for about ten minutes before his vitals dropped enough that they started it back up again. While he was conscious they tried communicating with him a bit, but his only response was shaking his head so they increased the sedation again.
@@ -67,7 +79,7 @@
     </div>
     <div class="divider"></div>
     <div class="updatesection">
-        <div class="update title">Monday, June 2</div>
+        <div class="title">Monday, June 2</div>
         <div class="update">
             <div>
                 Jake was sleeping all day. He had been using the nose oxygen tubes for the past day to increase his oxygen levels. While that was enough to keep him in a reasonble range, he was still building up too much CO2. To try to help that, the doctors put him on BiPAP, the mask that goes over his mouth to assist his breathing. After a few hours on that and checking his CO2 levels, they determined it was not enough. His CO2 levels were still rising too high. In addition to that, the fluid in his lungs was still not coming out, which was a bigger concern.
@@ -81,12 +93,12 @@
 </body>
 <style>
     body{
-        height:100%;
+        height:max-content;
         background:linear-gradient(340deg,#4F311C,#7D4D2C);
     }
     *{
         font-family:Helvetica;
-        border-radius:15px;
+        border-radius:1rem;
         cursor:default;
     }
     .headercontainer{
@@ -108,25 +120,79 @@
     .boogleft{
         margin-left:1rem;
         margin-right:auto;
-        margin-bottom:6px;
     }
     .boogright{
         margin-right:1rem;
         margin-left:auto;
-        margin-bottom:6px;
+    }
+    @media (max-width:600px){
+        .header{
+            font-size:1.6rem;
+            white-space:nowrap;
+        }
+        .boogleft{
+            scale:.6;
+            margin-left:0rem;
+        }
+        .boogright{
+            scale:.6;
+            margin-right:0rem;
+        }
+    }
+    .notesection{
+        display:flex;
+        flex-direction:inline;
+    }
+    .text{
+        height:max-content;
+
+        margin-top:8px;
+        margin-bottom:8px;
+
+        font-size:1rem;
+        white-space:wrap;
+
+        background:#B1764E;
+        border:2px solid #623313;
+        padding-left:.8rem;
+        padding-right:.8rem;
+        padding-top:.5rem;
+        padding-bottom:.4rem;
+    }
+    .note{
+        width:fit-content;
+        max-width:100%;
+
+        margin-left:auto;
+        margin-right:0px;
     }
     .updatesection{
         background:radial-gradient(#B1764E,#754829);
         height:auto;
         width:inherit;
-        margin-top:8px;
         margin-bottom:8px;
-        padding:8px;
+        padding-left:8px;
+        padding-right:8px;
+        padding-bottom:8px;
         border:8px solid #B1764E;
     }
     .updatesection { .updatesection&:nth-child(1 of &):not(:has(&) ~ * *):not(:has(&) ~ *):not(& ~ * *):not(& *) {
             border:8px solid #C77238;
         }
+    }
+    .title{
+        height:auto;
+        width:max-content;
+        margin-top:8px;
+        padding-left:.8rem;
+        padding-right:.8rem;
+        padding-top:.5rem;
+        padding-bottom:.4rem;
+        background:#B1764E;
+        border:2px solid #623313;
+        display:flex;
+        algin-items:center;
+        font-size:1rem;
     }
     .update{
         height:auto;
@@ -134,30 +200,12 @@
         margin-top:8px;
         text-indent:25px;
         white-space:wrap;
-        font-size:1rem;
         background:#B1764E;
         border:2px solid #623313;
-        padding-left:1vw;
-        padding-right:1vw;
+        padding-left:1rem;
+        padding-right:1rem;
         padding-top:.6rem;
-        padding-bottom:6px;
-    }
-    .title{
-        height:auto;
-        width:max-content;
-        text-indent:0px;
-    }
-    .note{
-        max-width:100%;
-        width:max-content;
-        text-indent:0px;
-        padding-top:11px;
-        margin-top:8px;
-        margin-bottom:8px;
-        margin-left:auto;
-        margin-right:8px;
-        font-size:1rem;
-        word-wrap:wrap;
+        padding-bottom:.5rem;
     }
     .divider{
         height:8px;
