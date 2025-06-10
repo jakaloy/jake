@@ -16,6 +16,20 @@
         </div>
     </div>
     <!-- insert new sections here -->
+    <div class="updatesection t">
+        <div class="titlesection">
+            <div class="title">Monday, June 9</div>
+        </div>
+        <div class="update">
+            <div>
+				Nothing much to say today. I'll just transcribe the voicemail from the doctor.
+			</div><br/>
+			<div>
+                "Things continue to feel like they're progressing relatively well. He did not need to be on the ventilator overnight. We will give you a call if theres any status change, otherwise I'll plan on touching base with you tomorrow."
+			</div>
+        </div>
+    </div>
+    <div class="divider"></div>
     <div class="updatesection">
         <div class="title">Sunday, June 8</div>
         <div class="update">
@@ -271,14 +285,23 @@
         padding-bottom:8px;
         border:8px solid #B1764E;
     }
+    /*
     .updatesection { .updatesection&:nth-child(1 of &):not(:has(&) ~ * *):not(:has(&) ~ *):not(& ~ * *):not(& *) {
             border:8px solid #C77238;
         }
+    }
+    */
+    .t{
+        border:8px solid #C77238;
+    }
+    .titlesection{
+        display:flex;
     }
     .title{
         height:auto;
         width:max-content;
         margin-top:8px;
+        margin-right:8px;
         padding-left:.8rem;
         padding-right:.8rem;
         padding-top:.5rem;
@@ -288,6 +311,10 @@
         display:flex;
         algin-items:center;
         font-size:1rem;
+    }
+    .birthday{
+        background:linear-gradient(to right,red,orange,yellow,green);
+        border:2px solid blue;
     }
     .update{
         height:auto;
