@@ -16,7 +16,20 @@
         </div>
     </div>
     <!-- insert new sections here -->
-    <div class="updatesection t">
+    <div class="updatesection ">
+        <div class="titlesection">
+            <div class="title">Wednesday, June 11</div>
+        </div>
+        <div class="update">
+            <div>
+				They need to do a procedure today. He's been doing well, but since he's still been needing a fair amount of oxygen and the x-rays show he has a lot of secretions in his airways, they're going to do a bronchoscopy. They'll stick a camera down his trach to take a look around and suck out anything they find which they'll send for testing. They haven't been doing a lot of swallowing and talking because of how much oxygen he's been needing. They're hoping this will give them some answers to help him move along.
+			<br/><br/>
+                They're thinking the trach could be permanent, so we'll have to wait and see on that.
+			</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="updatesection">
         <div class="titlesection">
             <div class="title">Monday, June 9</div>
         </div>
@@ -291,9 +304,6 @@
         }
     }
     */
-    .t{
-        border:8px solid #C77238;
-    }
     .titlesection{
         display:flex;
     }
@@ -343,3 +353,17 @@
         border-radius:0px;
     }
 </style>
+<script>
+    const divs = document.getElementsByTagName("div");
+    const today = new Date();
+    const options = {month: 'long', day: 'numeric' };
+    const todayString = today.toLocaleDateString('en-US', options);
+    for (let i = 0; i < divs.length; i++) {
+        if (divs[i].innerHTML.includes(todayString)) {
+            const parentDiv = divs[i].parentElement;
+            if (parentDiv && parentDiv.classList.contains("updatesection")) {
+                divs[i].parentElement.style.border = '8px solid #C77238';
+            }
+        }
+    }
+</script>
