@@ -28,6 +28,10 @@
 			</div>
         </div>
     </div>
+    <div class='weenpics'>
+        <img src='gene.jpg' width="auto" height="400">
+        <img src='dean.jpg' width="auto" height="400">
+    </div>
     <div class="divider"></div>
     <div class="updatesection">
         <div class="titlesection">
@@ -241,26 +245,6 @@
         margin-right:1rem;
         margin-left:auto;
     }
-    @media (max-width:600px){
-        .header{
-            font-size:1.6rem;
-            white-space:nowrap;
-            height:60px;
-        }
-        .boog{
-            scale:.6;
-            margin-top:0;
-            margin-bottom:.2rem;
-        }
-        .left{
-            margin-left:0rem;
-        }
-        .right{
-
-            margin-right:0rem;
-
-        }
-    }
     .notesection{
         display:flex;
         flex-direction:inline;
@@ -289,6 +273,8 @@
         margin-right:0px;
     }
     .updatesection{
+        display:flex;
+        flex-direction:column;
         background:radial-gradient(#B1764E,#754829);
         height:auto;
         width:inherit;
@@ -297,6 +283,7 @@
         padding-right:8px;
         padding-bottom:8px;
         border:8px solid #B1764E;
+        z-index:1;
     }
     /*
     .updatesection { .updatesection&:nth-child(1 of &):not(:has(&) ~ * *):not(:has(&) ~ *):not(& ~ * *):not(& *) {
@@ -306,6 +293,7 @@
     */
     .titlesection{
         display:flex;
+        z-index:1;
     }
     .title{
         height:auto;
@@ -351,6 +339,46 @@
         width:initial;
         background:#402817;
         border-radius:0px;
+    }
+    .weenpics{
+        display:flex;
+        gap:4vw;
+        align-items:center;
+        justify-content:center;
+        max-height:400px;
+        width:auto;
+    }
+    .weenpics img{
+        border:2px solid white;
+    }
+    @media (max-width:650px){
+        .header{
+            font-size:1.6rem;
+            white-space:nowrap;
+            height:60px;
+        }
+        .boog{
+            scale:.6;
+            margin-top:0;
+            margin-bottom:.2rem;
+        }
+        .left{
+            margin-left:0rem;
+        }
+        .right{
+            margin-right:0rem;
+        }
+        .weenpics img{
+            height:auto;
+            width:100%;
+        }
+    }
+    @media (max-width:1190px){
+        .weenpics{
+            flex-direction:column;
+            gap:1vw;
+            max-height:4000px;
+        }
     }
 </style>
 <script>
