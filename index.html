@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<title>How's Jake Doing?</title>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>How's Jake Doing?</title>
+</head>
 <body>
     <div class="headercontainer">
         <div class="header">
@@ -336,203 +341,9 @@
             <div>
                 At this point, the doctors recommented intubation. Jake, while willing, was not a fan of this idea. The doctors worried that, should they wait, Jake could end up requiring intubation emergently. After some conversing, and Uncle Tim's third opinion, Jake agreed and the procedure was started. Unfortunately, due to the metal rods in his neck, intubation proved impossible. Fortunately, because the procedure was not an emergency, they had the time to replan and ended up putting a temporary tube through Jake's throat for the ventilator with near future plans on giving him a tracheostomy.
                 <br/><br/>
-                Due to all of this, Jake is stable. For the rest of the day he was kept sedated and resting.</div>
+                Due to all of this, Jake is stable. For the rest of the day he was kept sedated and resting.
             </div>
+        </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
-<style>
-    body{
-        height:max-content;
-        background:linear-gradient(340deg,#4F311C,#7D4D2C);
-    }
-    *{
-        font-family:Helvetica;
-        border-radius:1rem;
-        cursor:default;
-    }
-    .headercontainer{
-        height:max-content;
-        width:auto;
-    }
-    .header{
-        height:100px;
-        width:stretch;
-        background:radial-gradient(circle at 42% -150%,#B1764E,#4F311C);
-        border:.5px solid #623313;
-
-        display:flex;
-        align-items:center;
-        justify-content:center;
-
-        font-size:4rem;
-        padding-top:8px;
-    }
-    .boog{
-        margin-top:.6rem;
-    }
-    .left{
-        margin-left:1rem;
-        margin-right:auto;
-    }
-    .right{
-        margin-right:1rem;
-        margin-left:auto;
-    }
-    .notesection{
-        display:flex;
-        flex-direction:inline;
-    }
-    .text{
-        height:max-content;
-
-        margin-top:8px;
-        margin-bottom:8px;
-
-        font-size:1rem;
-        white-space:wrap;
-
-        background:#B1764E;
-        border:2px solid #623313;
-        padding-left:.8rem;
-        padding-right:.8rem;
-        padding-top:.5rem;
-        padding-bottom:.4rem;
-    }
-    .note{
-        width:fit-content;
-        max-width:100%;
-
-        margin-left:auto;
-        margin-right:0px;
-    }
-    .updatesection{
-        display:flex;
-        flex-direction:column;
-        background:radial-gradient(#B1764E,#754829);
-        height:auto;
-        width:inherit;
-        margin-bottom:8px;
-        padding-left:8px;
-        padding-right:8px;
-        padding-bottom:8px;
-        border:8px solid #B1764E;
-        z-index:1;
-    }
-    /*
-    .updatesection { .updatesection&:nth-child(1 of &):not(:has(&) ~ * *):not(:has(&) ~ *):not(& ~ * *):not(& *) {
-            border:8px solid #C77238;
-        }
-    }
-    */
-    .titlesection{
-        display:flex;
-        z-index:1;
-    }
-    .title{
-        height:auto;
-        width:max-content;
-        margin-top:8px;
-        margin-right:8px;
-        padding-left:.8rem;
-        padding-right:.8rem;
-        padding-top:.5rem;
-        padding-bottom:.3rem;
-        background:#B1764E;
-        border:2px solid #623313;
-        text-align:center;
-        white-space:nowrap;
-        font-size:1rem;
-        align-self:center;
-    }
-    .birthday{
-        background:linear-gradient(45deg,red,orange,yellow,green);
-        border:2px solid blue;
-    }
-    #f{
-        white-space:wrap;
-        padding-left:.7rem;
-    }
-    .update{
-        height:auto;
-        width:inherit;
-        margin-top:8px;
-        text-indent:25px;
-        white-space:wrap;
-        background:#B1764E;
-        border:2px solid #623313;
-        padding-left:1rem;
-        padding-right:1rem;
-        padding-top:.6rem;
-        padding-bottom:.5rem;
-    }
-    .divider{
-        height:8px;
-        width:inherit;
-        background:#402817;
-        margin-top:8px;
-        margin-bottom:8px;
-    }
-    .headerbase{
-        height:12px;
-        width:initial;
-        background:#402817;
-        border-radius:0px;
-    }
-    .weenpics{
-        display:flex;
-        gap:4vw;
-        align-items:center;
-        justify-content:center;
-        max-height:400px;
-        width:auto;
-    }
-    .weenpics img{
-        border:2px solid white;
-    }
-    @media (max-width:650px){
-        .header{
-            font-size:1.5rem;
-            white-space:nowrap;
-            height:60px;
-            padding-top:6px;
-        }
-        .boog{
-            scale:.6;
-            margin-top:0;
-            margin-bottom:.2rem;
-        }
-        .left{
-            margin-left:0rem;
-            margin-right:-.8rem;
-        }
-        .right{
-            margin-right:0rem;
-            margin-left:-.8rem;
-        }
-        .weenpics img{
-            height:auto;
-            width:100%;
-        }
-    }
-    @media (max-width:1190px){
-        .weenpics{
-            flex-direction:column;
-            gap:1vw;
-            max-height:4000px;
-        }
-    }
-</style>
-<script>
-    const divs = document.getElementsByTagName("div");
-    const today = new Date();
-    const options = {month: 'long', day: 'numeric' };
-    const todayString = today.toLocaleDateString('en-US', options);
-    for (let i = 0; i < divs.length; i++) {
-        if (divs[i].innerHTML.includes(todayString)) {
-            const parentDiv = divs[i].parentElement;
-            if (parentDiv && parentDiv.classList.contains("updatesection")) {
-                divs[i].parentElement.style.border = '8px solid #C77238';
-            }
-        }
-    }
-</script>
